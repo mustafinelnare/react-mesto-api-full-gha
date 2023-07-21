@@ -9,7 +9,7 @@ Repository address: https://github.com/mustafinelnare/react-mesto-api-full-gha
 
 ## project's links
 
-IP-address 84.201.131.51
+IP 84.201.131.51
 
 Frontend https://project-mesto.nomoredomains.xyz
 
