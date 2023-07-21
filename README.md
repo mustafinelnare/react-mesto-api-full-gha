@@ -1,15 +1,15 @@
-[![Статус тестов](../../actions/workflows/tests.yml/badge.svg)](../../actions/workflows/tests.yml)
+[![Test Status](../../actions/workflows/tests.yml/badge.svg)](../../actions/workflows/tests.yml)
 
 # react-mesto-api-full
-Репозиторий для приложения проекта `Mesto`, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями. Бэкенд расположите в директории `backend/`, а фронтенд - в `frontend/`. 
+Repository for the `Mesto` project application, including frontend and backend parts of the application with the following features: user authorisations and registrations, card and user operations. Place the backend in the `backend/` directory and the frontend in `frontend/`. 
   
-Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
+Please attach in this description a link to the site hosted on Yandex.Cloud.
 
-Адрес репозитория: https://github.com/mustafinelnare/react-mesto-api-full-gha
+Repository address: https://github.com/mustafinelnare/react-mesto-api-full-gha
 
-## Ссылки на проект
+## project's links
 
-IP-адрес 84.201.131.51
+IP-address 84.201.131.51
 
 Frontend https://project-mesto.nomoredomains.xyz
 
