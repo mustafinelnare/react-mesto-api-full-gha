@@ -1,0 +1,16 @@
+.profile__update {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: none;
+  border: none;
+  border-radius: 50%;
+}
+
+.profile__update:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.8);
+  background-image: url(../../../images/profile-update.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}

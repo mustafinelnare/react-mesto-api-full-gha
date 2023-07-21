@@ -1,0 +1,11 @@
+.element__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 282px;
+  height: 361px;
+  margin: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

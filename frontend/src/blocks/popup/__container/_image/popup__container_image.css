@@ -1,0 +1,12 @@
+.popup__container_image {
+  width: auto;
+  max-width: 75vw;
+  max-height: 75vh;
+  background: transparent;
+}
+
+@media screen and (max-width: 505px) {
+  .popup__container_image {
+    height: 299px;
+  }
+}

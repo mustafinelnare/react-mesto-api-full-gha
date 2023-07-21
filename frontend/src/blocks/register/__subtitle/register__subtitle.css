@@ -1,0 +1,13 @@
+.register__subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  margin: 15px auto 0;
+}
+
+@media screen and (max-width: 425px) {
+  .register__subtitle {
+    margin-top: 20px;
+  }
+}

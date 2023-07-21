@@ -1,0 +1,19 @@
+.element__button {
+  max-width: 22px;
+  height: 19px;
+  width: 100%;
+  outline: none;
+  border: none;
+  background: inherit;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../../../images/like.svg);
+  margin-right: 5px;
+}
+
+.element__button:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+  cursor: pointer;
+}
