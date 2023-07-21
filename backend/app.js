@@ -27,7 +27,7 @@ mongoose
     console.log('fail');
   });
 
-app.use(cors({ origin: ['https://project-mesto.nomoredomains.xyz', 'http://project-mesto.nomoredomains.xyz'] }));
+app.use(cors({ origin: 'https://project-mesto.nomoredomains.xyz' }));
 
 app.use(requestLogger);
 
