@@ -26,7 +26,7 @@ mongoose
     console.log('fail');
   });
 
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: 'https://project-mesto.nomoredomains.xyz' }));
 
 app.post('/signin', celebrate({
   body: Joi.object().keys({
