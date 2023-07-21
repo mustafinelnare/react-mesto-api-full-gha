@@ -1,12 +1,13 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
+
 const { errors, celebrate, Joi } = require('celebrate');
 const mongoose = require('mongoose');
+const { requestLogger, errorLogger } = require('./middlewares/logger');
 const auth = require('./middlewares/auth');
 
 const app = express();
-const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const { login, createUser } = require('./controllers/users');
 const NotFoundError = require('./errors/NotFoundError');
@@ -27,6 +28,8 @@ mongoose
   });
 
 app.use(cors({ origin: 'https://project-mesto.nomoredomains.xyz' }));
+
+app.use(requestLogger);
 
 app.get('/crash-test', () => {
   setTimeout(() => {
@@ -50,8 +53,6 @@ app.post('/signup', celebrate({
     avatar: Joi.string().pattern(/^(https?):\/\/[^\s$.?#].[^\s]*$/),
   }),
 }), createUser);
-
-app.use(requestLogger);
 
 app.use('/users', auth, require('./routes/usersRoutes'));
 app.use('/cards', auth, require('./routes/cardsRoutes'));
