@@ -50,14 +50,14 @@ app.post('/signup', celebrate({
     password: Joi.string().min(8).required(),
     name: Joi.string().min(2).max(30),
     about: Joi.string().min(2).max(30),
-    avatar: Joi.string().pattern(/^(https?):\/\/[^\s$.?#].[^\s]*$/),
+    avatar: Joi.string().pattern(/^(https?:)?(www\.)?[a-zA-Z0-9-._~:/?#[\]@!$&'()*+,;=]+#?$/),
   }),
 }), createUser);
 
 app.use('/users', auth, require('./routes/usersRoutes'));
 app.use('/cards', auth, require('./routes/cardsRoutes'));
 
-app.use('/*', (req, res, next) => {
+app.use('/*', auth, (req, res, next) => {
   next(new NotFoundError('Страница не найдена.'));
 });
 

@@ -55,8 +55,9 @@ const getUserId = (req, res, next) => User.findById(req.params.id).then((item) =
   .catch((error) => {
     if (error.name === 'CastError') {
       next(new BadRequestError('Переданы некорректные данные при создании пользователя.'));
+    } else {
+      next(error);
     }
-    next(error);
   });
 
 const getCurrentUser = (req, res, next) => User.findById(req.user._id)
@@ -74,8 +75,9 @@ const updateProfile = (req, res, next) => User
   .catch((error) => {
     if (error.name === 'ValidationError') {
       next(new BadRequestError('Переданы некорректные данные при обновлении профиля.'));
+    } else {
+      next(error);
     }
-    next(error);
   });
 
 const updateAvatar = (req, res, next) => User
@@ -89,8 +91,9 @@ const updateAvatar = (req, res, next) => User
   .catch((error) => {
     if (error.name === 'ValidationError') {
       next(new BadRequestError('Переданы некорректные данные при обновлении аватара.'));
+    } else {
+      next(error);
     }
-    next(error);
   });
 
 module.exports = {
